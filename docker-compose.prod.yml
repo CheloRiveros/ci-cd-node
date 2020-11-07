@@ -1,0 +1,39 @@
+version: "3"
+services:
+  chat-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: production_frontend
+    expose:
+      - "3000"
+
+  chat-backend:
+    build:
+      context: ./backend
+    container_name: production_backend
+    environment:
+      - PORT=8080
+      - NODE_ENV=production
+      - FRONTEND_URL=http://g22-iic2173.tk
+    env_file:
+      - ./backend/.env.prod
+    volumes:
+      - ./backend:/backend
+      - /backend/node_modules
+    expose:
+      - "8080"
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: production_nginx
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/
+      - /var/lib/letsencrypt/:/var/lib/letsencrypt/
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - chat-frontend
+      - chat-backend
