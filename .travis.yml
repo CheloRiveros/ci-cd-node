@@ -38,17 +38,3 @@ deploy:
   bucket: "chat-deploy-from-travis" #target bucket to use
   region: sa-east-1
   upload-dir: latest
-- provider: codedeploy #Uploading to target group
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "chat-deploy-from-travis" #target bucket to use, definaed before
-  key: latest/latest.zip #Source code, you can use any name but must be consistent
-  bundle_type: zip
-  application: Chat
-  deployment_group: Chat-api
-  region: us-east-2
-  wait_until_deployed: true #wise thing to do
-  on:
-    branch: master
-
-
