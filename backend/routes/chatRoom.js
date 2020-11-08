@@ -16,6 +16,7 @@ module.exports = function (io) {
   /* POST chatroom */
   router.post("/", async (req, res, next) => {
     const { name } = req.body;
+    console.log(req.body)
     const chatRoom = await models.ChatRoom.findOne({
       where: {
         name,
