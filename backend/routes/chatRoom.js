@@ -49,7 +49,7 @@ module.exports = function (io) {
   });
 
   /* GET messages of chatroom */
-  router.get("/:chatRoomName/messages/", async (req, res, next) => {
+  router.get("/:chatRoomName/messages", async (req, res, next) => {
     const { chatRoomName } = req.params;
     const chatRoom = await models.ChatRoom.findOne({
       where: {

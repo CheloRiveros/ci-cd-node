@@ -8,7 +8,7 @@ module.exports = function (app, io) {
   app.use("/chatrooms", chatRoomsRouter(io));
   app.use("/auth", authRouter());
   app.use("/idEnd", idRouter(io));
-
+  
   // catch 404 and forward to error handler
   app.use((req, res, next) => {
     next(createError(404));

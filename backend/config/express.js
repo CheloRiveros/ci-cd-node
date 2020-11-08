@@ -6,7 +6,7 @@ module.exports = function (app) {
   const port = process.env.PORT || 8080;
   app.set("port", port);
   const server = http.createServer(app);
-  server.listen(port);
+  if (process.env.NODE_ENV !== 'test') server.listen(port);
 
   function onError(error) {
     if (error.syscall !== "listen") {
