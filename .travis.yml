@@ -3,7 +3,7 @@
 language: node_js
 
 env:
-  - AWS_USER_ID="197979423491" AWS_ECR_API="197979423491.dkr.ecr.sa-east-1.amazonaws.com/chat"
+  - AWS_USER_ID="197979423491" AWS_ECR_API="197979423491.dkr.ecr.us-east-2.amazonaws.com/chat"
 services:
    - docker
 branches:
