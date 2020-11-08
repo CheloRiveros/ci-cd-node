@@ -19,9 +19,9 @@ before_script:
 
 script:
   - echo "running tests"
-  - sed -i -e 's/\r$/\n/' start.sh
-  - sed -i -e 's/\r$/\n/' stop.sh
-  - sed -i -e 's/\r$/\n/' install.sh #correct files endings
+  - sed -i -e 's/\r$/\n/' scripts/start.sh
+  - sed -i -e 's/\r$/\n/' scripts/stop.sh
+  - sed -i -e 's/\r$/\n/' scripts/install.sh #correct files endings
   - cd backend
   - nvm install 12.0
   - npm install --silent
