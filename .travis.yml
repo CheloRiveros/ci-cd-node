@@ -16,6 +16,7 @@ install:
 script:
   - echo "running tests"
   - cd backend
+  - npm install
   - npm test
   - cd ..
   - zip -r latest *
