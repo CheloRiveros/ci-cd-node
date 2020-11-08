@@ -10,14 +10,14 @@ permissions:
     owner: ec2-user
 hooks:
   ApplicationStop:
-    - location: /scripts/stop.sh
+    - location: stop.sh
       timeout: 600
       runas: ec2-user
   AfterInstall:
-    - location: /scripts/install.sh
+    - location: install.sh
       timeout: 600
       runas: ec2-user
   ApplicationStart:
-    - location: /scripts/start.sh
+    - location: start.sh
       timeout: 600
       runas: ec2-user
