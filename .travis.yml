@@ -46,7 +46,7 @@ deploy:
   bundle_type: zip
   application: Chat
   deployment_group: Chat-api
-  region: sa-east-1
+  region: us-east-2
   wait_until_deployed: true #wise thing to do
   on:
     branch: master
