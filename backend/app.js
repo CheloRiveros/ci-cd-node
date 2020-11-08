@@ -5,7 +5,7 @@ const logger = require("morgan");
 const cors = require("cors");
 
 // Setup server
-const app = express();
+const app = express(); 
 const server = require("./config/express")(app);
 
 // view engine setup
