@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: scripts
-    destination: /ci-cd-node/
+    destination: /home/ec2-user/ci-cd-node
 permissions:
   - object: scripts
     pattern: "**"
