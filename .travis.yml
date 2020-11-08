@@ -24,7 +24,7 @@ script:
   - npm install --silent
   - npm test
   - cd ..
-  - zip -r latest *
+  - zip -r -q latest * && echo "success" || echo "failure"
   - mkdir -p dpl_cd_upload
   - mv latest.zip dpl_cd_upload/latest.zip 
 
