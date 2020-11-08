@@ -14,6 +14,9 @@ branches:
 install:
   - echo "install nothing!"
 
+before_script:
+  - psql -c 'create database chat_app_test;' -U postgres
+
 script:
   - echo "running tests"
   - cd backend
