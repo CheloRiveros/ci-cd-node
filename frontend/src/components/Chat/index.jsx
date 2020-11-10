@@ -28,7 +28,7 @@ const Chat = () => {
       });
       history.push(location.pathname);
     } else if (session === null) {
-      window.location = `${process.env.REACT_APP_API_URL}/auth/google`;
+      // window.location = `${process.env.REACT_APP_API_URL}/auth/google`;
     }
   }, [searchParams]);
 
