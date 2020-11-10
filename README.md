@@ -1,9 +1,11 @@
 # Proceso de Integración
 
+[Link a aplicación con CI-CD](g22-staging.tk)
+
 ## Integración Continua
 
 ### Setup
-Para lograr un exitoso proceso de integración continua, se necesita sólo un úni archivo: .travis.yml. Es este archivo el que leerá TravisCi para realizar el proceso de integración, una vez dado los permisos necesarios en el Repositorio.
+Para lograr un exitoso proceso de integración continua, se necesita sólo un único archivo: .travis.yml. Es este archivo el que leerá TravisCi para realizar el proceso de integración, una vez dado los permisos necesarios en el Repositorio.
 
 Al inicio del archivo, se debe especificar en qué lenguaje se está desarrollando el proyecto. En este caso, backend se está desarrollando usando nodeJs, por lo que así lo especificamos:
 ```
