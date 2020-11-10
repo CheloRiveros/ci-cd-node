@@ -15,7 +15,7 @@ services:
     environment:
       - PORT=8080
       - NODE_ENV=production
-      - FRONTEND_URL=http://g22-iic2173.tk
+      - FRONTEND_URL=http://g22-staging.tk
     env_file:
       - ./backend/.env.prod
     volumes:
