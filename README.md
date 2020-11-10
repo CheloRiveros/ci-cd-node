@@ -2,6 +2,8 @@
 
 [Link a aplicación con CI-CD](g22-staging.tk)
 
+Para acceder al servidor se debe hacer ssh -i "g-22-chat.pem" ec2-user@ec2-3-23-85-125.us-east-2.compute.amazonaws.com
+
 ## Integración Continua
 
 ### Setup
